@@ -1,15 +1,15 @@
 rule email_fake_tnt_with_discord
 {
   meta:
-		Author = "Barry <@BarryShooshooga>"
-		Description ="Credits to @dvk01uk for the campaign"
+  	Author = "Barry <@BarryShooshooga>"
+	Description ="Credits to @dvk01uk for the campaign"
     
   strings:
-    $subject="TNT Collection Request BH7 178845" nocase
-    $body1="PLC-CITY has arranged a shipment for you" nocase
-    $body2="Do you want to follow your package?" nocase
-    $body3="a TNT consignment number" nocase
+    	$subject="TNT Collection Request BH7 178845" nocase
+    	$body1="PLC-CITY has arranged a shipment for you" nocase
+    	$body2="Do you want to follow your package?" nocase
+    	$body3="a TNT consignment number" nocase
 
   condition:
-    all of them
+    	all of them
 }
