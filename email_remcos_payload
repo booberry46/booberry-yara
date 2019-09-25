@@ -1,0 +1,15 @@
+rule email_remcos_payload
+{
+  meta:
+  	Author = "Barry <@BarryShooshooga>"
+	Description ="Credits to @dvk01uk for the campaign"
+    
+  strings:
+    	$subject="Your account is long over due" nocase
+    	$body1="First Reminder" nocase
+    	$body2="A review of our records indicates that your account is long over due" nocase
+    	$body3="The attached invoice is now due for the past 10 days" nocase
+
+  condition:
+    	all of them
+}
