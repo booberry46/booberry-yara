@@ -1,0 +1,12 @@
+rule email_ursnif_payload
+{
+  meta:
+  	Author = "Barry <@BarryShooshooga>"
+	Description ="Credits to @malware_traffic for the hunting efforts"
+    
+  strings:
+    	$body1="zip pass 777" nocase
+
+  condition:
+    	all of them
+}
