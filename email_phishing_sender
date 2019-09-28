@@ -1,0 +1,17 @@
+rule email_phishing_sender
+{
+  meta:
+  	Author = "Barry <@BarryShooshooga>"
+	 Description ="Credits to @dvk01uk for the campaign"
+    
+  strings:
+    	$received_from_1="208.117.86.14" nocase
+    	$received_from_2="40.121.1.76" nocase
+	$received_from_3="138.68.212.58" nocase
+	$received_from_4="157.245.235.76" nocase
+	$received_from_5="68.183.44.6" nocase
+	$received_from_6="3.84.97.76" nocase
+
+  condition:
+    	all of them
+}
